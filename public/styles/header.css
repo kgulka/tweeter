@@ -1,0 +1,20 @@
+
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(145, 68, 40, 0.556);
+  background-image: url("/images/basketball.png") ;
+}
+
+.header-bottom {
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #FFFFFF;
+  font-weight: 200;
+  /*flex-basis: 20px; */
+}
+

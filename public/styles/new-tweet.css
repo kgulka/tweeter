@@ -1,0 +1,48 @@
+
+button {
+  background-color: darkblue;
+  color: #FFFFFF;
+  display: flex;
+  align-items:flex-start;  
+}
+output {
+  color: black;
+  display: flex;
+  align-items:flex-end;  
+}
+
+.tweet-top {
+  border-color: black;
+  border-bottom: 3px;
+  padding-bottom: 5px;
+}
+.tweet-bottom {
+  /* height: 400px;*/
+  font-family: bungee;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+.container {
+  width: 90%;
+}
+.new-tweet {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 30px;
+}
+#tweet-text {
+  width: 100%;
+  height: auto;
+  background-color: bisque;
+  border-color: black;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 4px;
+  padding: 3px;
+}
