@@ -22,16 +22,18 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+   
     <!--Font Awesome icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"/>
   </head>
+ 
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="header-left">tweeter</span>
       <div>
-          <span class="header-right"><b>Write</b> a new tweet</span>
+          <span class="header-right"><strong>Write</strong> a new tweet</span>
         <span id="arrow-down"><i class="fa-solid fa-angles-down"></i></span>
       </div>
     </nav>
@@ -41,7 +43,7 @@
       </div>
       <br>
       <div class="header-bottom">
-          <h2><b>Your</b> Name</h2>
+          <h2><strong>Your</strong> Name</h2>
       </div>
   </header>
     <!-- Page-specific (main) content here -->
@@ -55,10 +57,11 @@
         </div>
         <div class="tweet-bottom">
           <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output id="tweet-counter" name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
    </main>
+   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
