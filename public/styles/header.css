@@ -8,9 +8,12 @@ header {
   flex-direction: column;
   background-color: rgba(145, 68, 40, 0.556);
   background-image: url("/images/basketball.png") ;
+  position: relative;
+  top: 120px;
 }
 
 .header-bottom {
+  /*height: 25px;*/
   justify-content: flex-start;
   align-items: flex-start;
   color: #FFFFFF;

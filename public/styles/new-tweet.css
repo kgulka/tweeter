@@ -29,6 +29,8 @@ output {
 .container {
   width: 90%;
   border-radius: 6px;
+  position: relative;
+  top: 120px;
 }
 .new-tweet {
   width: 100%;
