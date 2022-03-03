@@ -6,6 +6,12 @@
 
 $(document).ready(function() {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const createTweetElement = function(tweetData) { 
 
     const $tweet = $(`
@@ -14,7 +20,7 @@ $(document).ready(function() {
           <p><img src="${tweetData.user.avatars}">${tweetData.user.name}</p>
           <p>${tweetData.user.handle}</p>
         </header>
-        <p class="past-tweet-text">${tweetData.content.text}</p>
+        <p class="past-tweet-text">${escape(tweetData.content.text)}</p>
         <footer>
           <p>${timeago.format(tweetData.created_at)}</p>
           <p><i class="fa-solid fa-flag"></i>&nbsp;&nbsp;<i class="fa-solid   fa-retweet"></i>&nbsp;&nbsp;<i class="fa-solid fa-heart"> </i></p>
@@ -27,7 +33,7 @@ $(document).ready(function() {
   const renderTweets = function (arrTweetData) {
     for (let tweetData of arrTweetData) {
       const $tweet = createTweetElement(tweetData);
-      $('#tweets-container').append($tweet);
+      $('#all-tweets').append($tweet);
     }
     return;
   }
@@ -43,26 +49,27 @@ $(document).ready(function() {
 const tweetDataIsValid = function(textString) {
   
   if (!textString) {
-    console.log("textString:",textString);
-    alert("The tweet contains no message.");
+    $("#error-msg").text("Error: The tweet contains no message.");
+    $("#error-msg").slideDown();
     return false;
   }
-  //const textString = textString.substring(textString.indexOf("="));
-  console.log("textString:",textString);
-  if (textString.length > 140) {
-    alert("The tweet message is too long.");
+    if (textString.length > 140) {
+  
+    $("#error-msg").text("Error: The tweet message is too long.");
+    $("#error-msg").slideDown();
     return false; 
   }
+  $("#error-msg").hide();
   return true;
 }
 
   $(function() {
     let  request = null;
     const $form = $('form');
-    //const $tweetText = $('tweet-text');
-
+  
     $form.submit(function (event) {
       event.preventDefault();
+      $("#error-msg").slideUp();
       const textValue = $("textarea#tweet-text").val();
       let queryStr = $form.find("button, textarea");
       if (!tweetDataIsValid(textValue)) {
@@ -76,6 +83,7 @@ const tweetDataIsValid = function(textString) {
         console.log("Tweet POST successful.");
         $("textarea#tweet-text").val("");
         $("output#tweet-counter").text("140");
+        loadTweets();
       });
       // Callback handler that will be called on failure
       request.fail(function (jqXHR, status, error){
@@ -89,7 +97,13 @@ const tweetDataIsValid = function(textString) {
       });
     });
   });  
-//temporary data set.
+  
+  $("#error-msg").hide();
+  loadTweets();
+  
+});
+/*
+  //temporary data set.
   const data = [
     {
       "user": {
@@ -114,10 +128,4 @@ const tweetDataIsValid = function(textString) {
       "created_at": 1461113959088
     }
   ]
-  loadTweets();
-  //renderTweets(JSON.parse(loadTweets()));
-  //console.log("json ver:",JSON.stringify(loadTweets()));
-  //console.log("json raw:",loadTweets());
-  //renderTweets(JSON.parse(loadTweets()));
-});
-
+  */

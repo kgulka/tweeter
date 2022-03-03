@@ -14,6 +14,7 @@ output {
 .tweet-top {
   border-color: black;
   border-bottom: 3px;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
 .tweet-bottom {
@@ -38,6 +39,7 @@ output {
   padding-right: 5%;
   padding-bottom: 30px;
 }
+
 #tweet-text {
   width: 100%;
   height: auto;
@@ -50,3 +52,8 @@ output {
   padding: 3px;
 }
 
+#error-msg {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  color:red;
+}

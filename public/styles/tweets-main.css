@@ -74,3 +74,15 @@ p {
 .fa-solid:hover {
   color:coral;
 }
+#all-tweets {
+  width: 97%;
+   /* flex box attributes */
+   display: flex;
+   /*align-items: center; */ /*vertical*/
+   flex-direction: column-reverse; /*arrange in a column*/
+   justify-content: center; /*horizontal*/
+   align-content: center; 
+   align-items: center;
+   /* flex-basis: ; */
+   
+}
