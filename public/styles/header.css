@@ -1,11 +1,13 @@
 
-header {
+header.header-top {
   height: 400px;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
   background-color: rgba(145, 68, 40, 0.556);
   background-image: url("/images/basketball.png") ;
   position: relative;

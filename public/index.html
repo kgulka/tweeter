@@ -17,13 +17,12 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />    
-    <link rel="stylesheet" href="/styles/tweets-main.css" type="text/css" /    
+    <link rel="stylesheet" href="/styles/tweets-main.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- this is the time library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-   
     <!--Font Awesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"/>
   </head>
@@ -35,10 +34,10 @@
       <span class="header-left">tweeter</span>
       <div>
           <span class="header-right"><strong>Write</strong> a new tweet</span>
-        <span id="arrow-down"><i class="fa-solid fa-angles-down"></i></span>
+          <span id="arrow-down"><i class="fa-solid fa-angles-down"></i></span>
       </div>
     </nav>
-    <header>
+    <header class="header-top">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -46,9 +45,9 @@
       <div class="header-bottom">
           <h2><strong>Your</strong> Name</h2>
       </div>
-  </header>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="tweets-container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
@@ -62,13 +61,11 @@
           </div>
         </form>
       </section>
-      <article>
-        <h3><p><i class="fa-solid fa-ghost"></i> Name here</p><p>@IdHere</p></h3>
-        <p class="past-tweet-text">This is the tweet text. </p>
-        <footer><p>11 days ago</p><p><i class="fa-solid fa-flag"> </i> <i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"> </i></p></footer>
-      </article>
-
-   </main>
-   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    </main>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    
   </body>
 </html>
+

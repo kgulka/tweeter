@@ -29,11 +29,11 @@ body {
 }
 
 main {
-  width: 90%;
+  width: 100%;
   height: max-content;
-  display: flex; 
   margin: auto;
   background-color:bisque;
+  display: flex; 
   align-items:center;
   flex-direction: column;
 }

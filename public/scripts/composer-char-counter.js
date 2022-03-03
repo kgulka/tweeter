@@ -4,7 +4,7 @@ $(document).ready(() => {
   console.log("loaded");
   const $tweetTextArea = $("#tweet-text");
 
-  $tweetTextArea.on("keypress", function() {
+  $tweetTextArea.on("input", function() {
     const maxTweetChars = 140;
     const $twtTextArea = $(this);
     const tweetText = $twtTextArea.val();
