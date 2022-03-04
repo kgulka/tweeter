@@ -6,20 +6,17 @@ header.header-top {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
   background-color: rgba(145, 68, 40, 0.556);
   background-image: url("/images/basketball.png") ;
   position: relative;
-  top: 120px;
+  top: 120px; 
+  opacity: 1;
 }
 
 .header-bottom {
-  /*height: 25px;*/
   justify-content: flex-start;
   align-items: flex-start;
   color: #FFFFFF;
   font-weight: 200;
-  /*flex-basis: 20px; */
 }
 
