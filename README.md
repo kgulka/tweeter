@@ -20,6 +20,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Body-parser
 ## Screenshots
 
-!["Screenshot of Desktop UI"](URL here)
+!["Screenshot of Desktop UI"](https://github.com/kgulka/tweeter/blob/master/docs/tweeter_desktop.png?raw=true)
 
-!["Screenshot of Tablet/Mobile UI"](URL here)
+!["Screenshot of Tablet/Mobile UI"](https://github.com/kgulka/tweeter/blob/master/docs/tweeter_tablet_mobile.png?raw=true)
