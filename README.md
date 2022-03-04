@@ -16,3 +16,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
+## Screenshots
+
+!["Screenshot of Desktop UI"](URL here)
+
+!["Screenshot of Tablet/Mobile UI"](URL here)
